@@ -78,7 +78,7 @@ export const HomeSection = ({ onNavigate }) => {
               border: '4px solid var(--surface)'
             }}>
               <img 
-                src="/hero.jpg" 
+                src="./hero.jpg" 
                 alt="SMA Negeri EduSphere Kampus" 
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />

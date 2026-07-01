@@ -6,7 +6,7 @@ export const STAF_DATA = [
     name: "Dr. Neko, M.Kom",
     role: "Kepala Sekolah",
     desc: "Memimpin SMA Negeri EduSphere sejak tahun 2020 dengan visi mewujudkan sekolah digital ramah lingkungan berprestasi global.",
-    image: "/neko.png"
+    image: "./neko.png"
   },
   {
     name: "Ibu Retno Wulandari, M.Pd.",
