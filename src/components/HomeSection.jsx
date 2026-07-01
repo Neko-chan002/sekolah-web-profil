@@ -155,7 +155,7 @@ export const HomeSection = ({ onNavigate }) => {
                 Kami berkomitmen membekali setiap peserta didik dengan fondasi moral yang kokoh (karakter), kapasitas sains mendalam, dan literasi digital tinggi guna menyongsong era global yang penuh tantangan. Semoga portal info ini memberikan wawasan jernih tentang dedikasi pendidikan kami.
               </div>
               <div className="signature-font">
-                — Dr. Neko, M.Pd.
+                — Dr. Neko, M.Kom
               </div>
             </div>
           </div>
