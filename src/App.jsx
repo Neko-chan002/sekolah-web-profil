@@ -81,21 +81,46 @@ export const App = () => {
   return (
     <div style={{ position: 'relative', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       
-      {/* Premium Chibi Logo Entrance Preloader */}
+      {/* Premium+++ Cinematic Split-Curtain Preloader */}
       {loading && (
         <div className={`preloader-overlay ${fadeOut ? 'fade-out' : ''}`}>
-          <div className="preloader-content">
-            <div className="preloader-logo-container">
-              <div className="preloader-logo-glow"></div>
-              <div className="preloader-crest" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <span style={{ fontSize: '3rem', filter: 'drop-shadow(0 0 12px rgba(0, 180, 255, 0.4))' }}>🏫</span>
+          {/* Split Curtains */}
+          <div className="preloader-curtain curtain-left"></div>
+          <div className="preloader-curtain curtain-right"></div>
+          
+          {/* Glowing Background Particles */}
+          <div className="preloader-particles">
+            <div className="particle p1"></div>
+            <div className="particle p2"></div>
+            <div className="particle p3"></div>
+            <div className="particle p4"></div>
+            <div className="particle p5"></div>
+          </div>
+          
+          <div className="preloader-content-wrapper">
+            {/* Double Glowing Orbit Rings */}
+            <div className="preloader-orbit-container">
+              <div className="orbit-ring ring-outer"></div>
+              <div className="orbit-ring ring-inner"></div>
+              <div className="preloader-crest-center">
+                <span className="preloader-emoji">🏫</span>
               </div>
             </div>
-            <h1 className="preloader-title">SMAN EduSphere</h1>
-            <div className="preloader-progress-bar">
-              <div className="preloader-progress-fill"></div>
+            
+            {/* Cinematic Metallic Shine Title */}
+            <h1 className="preloader-title-cinematic">
+              <span>SMAN</span><span>EDUSPHERE</span>
+            </h1>
+            
+            {/* Pulse Line Loader */}
+            <div className="preloader-pulse-track">
+              <div className="preloader-pulse-glow"></div>
             </div>
-            <span className="preloader-subtitle">SEKOLAH HIJAU & DIGITAL</span>
+            
+            {/* Cinematic Subtitle */}
+            <span className="preloader-subtitle-cinematic">
+              SEKOLAH HIJAU & DIGITAL
+            </span>
           </div>
         </div>
       )}
