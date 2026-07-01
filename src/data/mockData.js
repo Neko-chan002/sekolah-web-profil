@@ -3,10 +3,10 @@
 
 export const STAF_DATA = [
   {
-    name: "Dr. H. Ahmad Fauzi, M.Pd.",
+    name: "Dr. Neko, M.Pd.",
     role: "Kepala Sekolah",
     desc: "Memimpin SMA Negeri EduSphere sejak tahun 2020 dengan visi mewujudkan sekolah digital ramah lingkungan berprestasi global.",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=600"
+    image: "/neko.png"
   },
   {
     name: "Ibu Retno Wulandari, M.Pd.",
