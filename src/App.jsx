@@ -87,12 +87,8 @@ export const App = () => {
           <div className="preloader-content">
             <div className="preloader-logo-container">
               <div className="preloader-logo-glow"></div>
-              <div className="preloader-crest" style={{ overflow: 'hidden', padding: 0 }}>
-                <img 
-                  src="./neko.jpg" 
-                  alt="SMAN EduSphere Logo" 
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '22px' }} 
-                />
+              <div className="preloader-crest" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <span style={{ fontSize: '3rem', filter: 'drop-shadow(0 0 12px rgba(0, 180, 255, 0.4))' }}>🏫</span>
               </div>
             </div>
             <h1 className="preloader-title">SMAN EduSphere</h1>
