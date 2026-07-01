@@ -13,6 +13,8 @@ export const App = () => {
     return localStorage.getItem('edu_theme') || 'light'; // Default Light mode for clean soothing Sage & Cream feel
   });
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [fadeOut, setFadeOut] = useState(false);
 
   // Sync theme to document element
   useEffect(() => {
@@ -25,6 +27,18 @@ export const App = () => {
     }, 150);
     return () => clearTimeout(timer);
   }, [theme]);
+
+  // Preloader timer
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setFadeOut(true);
+      const removeTimer = setTimeout(() => {
+        setLoading(false);
+      }, 800); // matches the transition duration in CSS
+      return () => clearTimeout(removeTimer);
+    }, 2000); // 2 seconds display time
+    return () => clearTimeout(timer);
+  }, []);
 
   const toggleTheme = () => {
     setTheme(prev => prev === 'light' ? 'dark' : 'light');
@@ -66,6 +80,29 @@ export const App = () => {
 
   return (
     <div style={{ position: 'relative', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      
+      {/* Premium Chibi Logo Entrance Preloader */}
+      {loading && (
+        <div className={`preloader-overlay ${fadeOut ? 'fade-out' : ''}`}>
+          <div className="preloader-content">
+            <div className="preloader-logo-container">
+              <div className="preloader-logo-glow"></div>
+              <div className="preloader-crest" style={{ overflow: 'hidden', padding: 0 }}>
+                <img 
+                  src="./neko.jpg" 
+                  alt="SMAN EduSphere Logo" 
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '22px' }} 
+                />
+              </div>
+            </div>
+            <h1 className="preloader-title">SMAN EduSphere</h1>
+            <div className="preloader-progress-bar">
+              <div className="preloader-progress-fill"></div>
+            </div>
+            <span className="preloader-subtitle">SEKOLAH HIJAU & DIGITAL</span>
+          </div>
+        </div>
+      )}
       
       {/* Header / Navbar */}
       <header className="glass-panel" style={{
